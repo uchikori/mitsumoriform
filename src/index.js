@@ -2,6 +2,7 @@ import "./scss/style.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
   setUpAccordion();
+  colorPicker();
 });
 
 const setUpAccordion = () => {
@@ -89,4 +90,15 @@ const setUpAccordion = () => {
       opacity: 1,
     },
   ];
+};
+
+const colorPicker = () => {
+  const colorElement = document.getElementById("color");
+  const colorText = document.getElementById("colorCode");
+  colorText.readOnly = true;
+
+  const button = document.getElementById("colorCheck");
+  button.addEventListener("click", () => {
+    colorText.value = colorElement.value;
+  });
 };

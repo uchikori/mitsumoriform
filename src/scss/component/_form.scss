@@ -134,6 +134,13 @@
       border-radius: 6px;
     }
   }
+  .colorpick-eyedropper-input-trigger {
+    display: none;
+  }
+  .caption {
+    @include g.font-style(12px, g.$color-red, 700, 1.5, 0);
+    margin-top: -11px;
+  }
 }
 input[type="text"] {
   width: 100%;
@@ -143,5 +150,24 @@ input[type="text"] {
   @include g.font-style(16px, g.$color-dark, 700, 1, 0);
   &::placeholder {
     color: g.$color-grey;
+  }
+  &#colorCode {
+    width: 220px !important;
+    background-color: #f5f5f5;
+  }
+}
+input[type="color"] {
+  width: 80px;
+  height: 44px;
+  border: solid 1px g.$color-black;
+  cursor: pointer;
+}
+button {
+  &.colorCheck {
+    width: 120px;
+    height: 44px;
+    background-color: g.$color-grey;
+    text-align: center;
+    border: solid 1px g.$color-black;
   }
 }
