@@ -55,9 +55,9 @@ $sp: 428px; // スマホ
 //-------------------------------
 //  font-family
 //-------------------------------
-$font: "Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN",
-  "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", Meiryo, sans-serif;
-$josefin: "Josefin Sans", sans-serif;
+$font: "Noto Sans JP", "Hiragino Sans", ヒラギノ角ゴシック,
+  "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro",
+  Meiryo, sans-serif;
 //-------------------------------
 //  color
 //-------------------------------
@@ -107,6 +107,10 @@ html {
 }
 body {
   font-family: $font;
+  background-image: url("images/background_opt.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   &.fixed {
     overflow: hidden;
   }

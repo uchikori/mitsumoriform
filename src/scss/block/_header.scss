@@ -1,11 +1,36 @@
-@use '../global' as g;
+@use "../global" as g;
 // ヘッダー
-.header{
-    width: 100%;
-    padding: 20px;
-    background-color: g.$color-white;
-    border-bottom: solid 1px, g.$color-grey;
-    position: fixed;
-    top: 0;
-    left: 0;
+.header {
+  width: 100%;
+  height: 300px;
+  background-color: g.$color-dark;
+  &__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .titleLogo {
+    width: 172px;
+    aspect-ratio: 172/60;
+    img {
+      height: auto;
+    }
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: -40px;
+    span {
+      @include g.font-style(
+        clamp(1.125rem, 0.9485rem + 0.8824vw, 1.5rem),
+        g.$color-white,
+        700,
+        1.5,
+        0
+      );
+    }
+  }
 }

@@ -4,13 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>見積依頼フォーム</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- 本番Build後に有効にする -->
     <!-- <link rel="stylesheet" href="style.css"> -->
   </head>
-  <body>
+  <body class="front-page">
     <div class="wrapper">
-      <h1 class="title flex justify-center mt-40">h1タイトルです</h1>
+      <header class="header">
+        <div class="header__inner container">
+          <h1 class="accessibly-hidden">
+            <figure class="titleLogo">
+              <img
+                src="images/LOGO_opt.png"
+                width="172"
+                height="60"
+                alt="LOGO"
+              />
+            </figure>
+            <span>簡単!見積依頼フォーム</span>
+          </h1>
+        </div>
+      </header>
+      <main class="main container">
+        <div class="form">
+          <div class="formFlow">
+            <div class="formFlow__item active">01<br />入力</div>
+            <span class="line"></span>
+            <div class="formFlow__item">02<br />確認</div>
+            <span class="line"></span>
+            <div class="formFlow__item">03<br />送信</div>
+          </div>
+          <p class="form__description">
+            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+          </p>
+          <!-- MW WP form 埋め込み -->
+          <div class="mw_wp_form mw_wp_form_input">
+            <form method="post">
+              <details class="formItem js-details">
+                <summary class="formItem__title js-summary">
+                  見積依頼①<span></span>
+                </summary>
+                <div class="formItem__body js-content">
+                  <div class="formItem__inner">
+                    <div class="formItem__input">
+                      <label for="location"
+                        >設置予定箇所<span class="hissu">必須</span></label
+                      >
+                      <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        class="location"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </form>
+          </div>
+          <!-- MW WP form 埋め込み -->
+        </div>
+      </main>
     </div>
 
     <script defer src="/main.js"></script>

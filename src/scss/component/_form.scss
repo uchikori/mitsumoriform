@@ -1,1 +1,119 @@
-@use '../global' as g;
+@use "../global" as g;
+.form {
+  background-color: g.$color-white;
+  padding: 60px 60px 80px 60px;
+  margin-top: -80px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+  @include g.pc {
+    padding: 6rem 6rem 8rem 6rem;
+  }
+  @include g.tab {
+    padding: 3rem 3rem 4rem 3rem;
+  }
+  @include g.small {
+    padding: 3rem 1rem 4rem 1rem;
+  }
+  &__description {
+    text-align: center;
+    margin-top: clamp(1.25rem, 0.6618rem + 2.9412vw, 2.5rem);
+    @include g.font-style(
+      clamp(0.875rem, 0.8162rem + 0.2941vw, 1rem),
+      g.$color-dark,
+      700,
+      1.5,
+      0
+    );
+  }
+}
+.formFlow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    width: clamp(3.75rem, 3.1618rem + 2.9412vw, 5rem);
+    height: clamp(3.75rem, 3.1618rem + 2.9412vw, 5rem);
+    background-color: g.$color-white;
+    border: solid 2px g.$color-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 100%;
+    text-align: center;
+    @include g.font-style(
+      clamp(0.75rem, 0.6324rem + 0.5882vw, 1rem),
+      g.$color-grey,
+      700,
+      1.25,
+      0
+    );
+    &.active {
+      background-color: g.$color-black;
+      border: none;
+      color: g.$color-white;
+    }
+  }
+  .line {
+    display: inline-block;
+    width: clamp(1.25rem, -0.5147rem + 8.8235vw, 5rem);
+    height: 2px;
+    background-color: g.$color-grey;
+  }
+}
+.mw_wp_form {
+  margin-top: clamp(1.875rem, 0.9926rem + 4.4118vw, 3.75rem);
+}
+.formItem {
+  display: block;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    cursor: pointer;
+    @include g.font-style(
+      clamp(1.125rem, 0.9485rem + 0.8824vw, 1.5rem),
+      g.$color-dark,
+      700,
+      1.5,
+      0
+    );
+    span {
+      display: inline-block;
+      width: clamp(1.25rem, 0.6618rem + 2.9412vw, 2.5rem);
+      height: 2px;
+      background-color: g.$color-grey;
+      position: relative;
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: g.$color-grey;
+        transform: rotateZ(90deg);
+        transition: transform 0.4s ease-in-out;
+        .is-opened & {
+          transform: rotateZ(0);
+          transition: transform 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+  summary::-webkit-details-marker {
+    /* Safariで表示されるデフォルトの三角形アイコンを消します */
+    display: none;
+  }
+  &__body {
+    overflow: hidden;
+  }
+  &__inner {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
