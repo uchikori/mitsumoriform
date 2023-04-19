@@ -232,3 +232,14 @@ button {
     border: solid 1px g.$color-black;
   }
 }
+select {
+  width: 100%;
+  border: solid 1px g.$color-grey;
+  background-color: g.$color-white;
+  padding: 10px;
+  @include g.font-style(16px, g.$color-dark, 700, 1, 0);
+  text-align: left;
+  &::placeholder {
+    color: g.$color-grey;
+  }
+}
