@@ -27,10 +27,32 @@
                 alt="LOGO"
               />
             </figure>
-            <span>簡単!見積依頼フォーム</span>
           </h1>
         </div>
       </header>
+      <section id="hero" class="hero">
+        <figure class="hero__image">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="images/hero_opt.webp 1x, images/hero@2x_opt.webp 2x"
+            />
+            <source
+              type="image/jpeg"
+              srcset="images/hero_opt.jpg 1x, images/hero@2x_opt.jpg 2x"
+            />
+
+            <img
+              srcset="images/hero_opt.jpg"
+              src="images/hero_opt.jpg"
+              width="1920"
+              height="390"
+              alt=""
+            />
+          </picture>
+        </figure>
+        <h1 class="hero__title">簡単!見積依頼フォーム</h1>
+      </section>
       <main class="main container">
         <div class="form">
           <div class="formFlow">
@@ -46,7 +68,7 @@
           <!-- MW WP form 埋め込み -->
           <div class="mw_wp_form mw_wp_form_input">
             <form method="post">
-              <details class="formItem js-details">
+              <details class="formItem js-details is-opened" open="true">
                 <summary class="formItem__title js-summary">
                   見積依頼①<span></span>
                 </summary>
@@ -68,7 +90,7 @@
                       <label for="color" class="formInput__label"
                         >色<span class="hissu">必須</span></label
                       >
-                      <div class="flex" style="gap: 20px">
+                      <div class="flex align-center" style="gap: 20px">
                         <input
                           type="color"
                           id="color"
@@ -83,11 +105,68 @@
                           決定
                         </button>
                       </div>
-
                       <input type="text" id="colorCode" name="colorCode" />
                       <p class="caption">
                         ※色はWeb上での参考イメージです。実際のサンプル品とは若干色合いが異なる可能性があります
                       </p>
+                    </div>
+                    <div class="formInput radioBtn">
+                      <label for="shape" class="formInput__label"
+                        >形状<span class="hissu">必須</span></label
+                      >
+                      <div class="input__wrap">
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape"
+                              value="四角"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >四角</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape"
+                              value="長方形"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >長方形</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape"
+                              value="その他（お問い合わせください）"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >その他（お問い合わせください）</span
+                            ></label
+                          ></span
+                        >
+                      </div>
+                    </div>
+                    <div class="formInput">
+                      <label for="amount" class="formInput__label"
+                        >数量<span class="hissu">必須</span></label
+                      >
+                      <div class="flex align-center" style="gap: 10px">
+                        <input
+                          type="text"
+                          id="amount"
+                          name="amount"
+                          class="amount"
+                          placeholder="100"
+                        />
+                        平米
+                      </div>
                     </div>
                   </div>
                 </div>

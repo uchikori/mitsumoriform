@@ -2,35 +2,62 @@
 // ヘッダー
 .header {
   width: 100%;
-  height: 300px;
-  background-color: g.$color-dark;
+  height: 90px;
+  background-color: g.$color-white;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include g.small {
+    height: 60px;
+  }
   &__inner {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
   }
   .titleLogo {
     width: 172px;
     aspect-ratio: 172/60;
+    @include g.small {
+      width: 100px;
+    }
     img {
       height: auto;
     }
   }
-  h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: -40px;
-    span {
-      @include g.font-style(
-        clamp(1.125rem, 0.9485rem + 0.8824vw, 1.5rem),
-        g.$color-white,
-        700,
-        1.5,
-        0
-      );
+}
+
+.hero {
+  width: 100%;
+  height: 390px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include g.small {
+    height: 300px;
+  }
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      object-fit: cover;
     }
+  }
+  &__title {
+    @include g.font-style(
+      clamp(1.125rem, 0.9485rem + 0.8824vw, 1.5rem),
+      g.$color-white,
+      700,
+      1.5,
+      0
+    );
   }
 }

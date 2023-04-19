@@ -1,17 +1,11 @@
 @use "../global" as g;
 .form {
   background-color: g.$color-white;
-  padding: 60px 60px 80px 60px;
+  padding: 60px 40px 80px 40px;
   margin-top: -80px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
-  @include g.pc {
-    padding: 6rem 6rem 8rem 6rem;
-  }
   @include g.tab {
-    padding: 3rem 3rem 4rem 3rem;
-  }
-  @include g.small {
-    padding: 3rem 1rem 4rem 1rem;
+    padding: 30px 20px 60px 20px;
   }
   &__description {
     text-align: center;
@@ -115,12 +109,15 @@
     padding: 20px 0;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
 }
 .formInput {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
   gap: 16px;
   &__label {
     display: flex;
@@ -142,18 +139,27 @@
     margin-top: -11px;
   }
 }
+.input__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @include g.tab {
+    gap: 16px;
+  }
+}
 input[type="text"] {
   width: 100%;
   border: solid 1px g.$color-grey;
   background-color: g.$color-white;
   padding: 10px;
   @include g.font-style(16px, g.$color-dark, 700, 1, 0);
+  text-align: left;
   &::placeholder {
     color: g.$color-grey;
   }
-  &#colorCode {
+  &#colorCode,
+  &#amount {
     width: 220px !important;
-    background-color: #f5f5f5;
   }
 }
 input[type="color"] {
@@ -161,6 +167,61 @@ input[type="color"] {
   height: 44px;
   border: solid 1px g.$color-black;
   cursor: pointer;
+}
+//▼ラジオボタンカスタム
+.radioBtn {
+  .horizontal-item {
+    & + .horizontal-item {
+      margin-left: 0;
+    }
+  }
+}
+.mwform-radio-field {
+  display: block;
+  padding: 8px 0;
+}
+input[type="radio"] {
+  &.btnHidden {
+    display: none;
+    &:checked {
+      & + span {
+        color: #2ca6e0;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.mwform-radio-field-text {
+  @include g.font-style(18px, g.$color-dark, 400, 1, 0);
+  padding-left: 25px;
+  display: inline-block;
+  position: relative;
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid g.$color-grey;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: g.$color-white;
+  }
+  &:after {
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: #2ca6e0;
+  }
 }
 button {
   &.colorCheck {
