@@ -108,9 +108,7 @@ html {
 body {
   font-family: $font;
   background-image: url("images/background_opt.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-repeat: repeat;
   &.fixed {
     overflow: hidden;
   }

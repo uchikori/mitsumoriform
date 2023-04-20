@@ -4,11 +4,12 @@
   width: 100%;
   height: 90px;
   background-color: g.$color-white;
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.16);
+  border-bottom: solid 1px g.$color-grey;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   @include g.small {
     height: 60px;
   }
@@ -16,13 +17,11 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   .titleLogo {
-    width: 172px;
-    aspect-ratio: 172/60;
-    @include g.small {
-      width: 100px;
-    }
+    width: 100px;
+    aspect-ratio: 100/32;
     img {
       height: auto;
     }
@@ -32,29 +31,19 @@
 .hero {
   width: 100%;
   height: 390px;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: transparent;
   @include g.small {
     height: 300px;
   }
-  &__image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    img {
-      object-fit: cover;
-    }
-  }
   &__title {
+    text-align: center;
     @include g.font-style(
       clamp(1.125rem, 0.9485rem + 0.8824vw, 1.5rem),
-      g.$color-white,
+      g.$color-dark,
       700,
       1.5,
       0
