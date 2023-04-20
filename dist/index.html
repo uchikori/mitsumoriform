@@ -25,6 +25,7 @@
                 height="32"
                 alt="range"
                 loading="lazy"
+                decoding="async"
               />
             </figure>
         </div>
@@ -89,13 +90,13 @@
                           決定
                         </button>
                       </div>
-                      <input type="text" id="colorCode" name="colorCode" />
+                      <input type="text" id="colorCode" name="colorCode" class="colorCode"/>
                       <p class="caption">
                         ※色はWeb上での参考イメージです。実際のサンプル品とは若干色合いが異なる可能性があります
                       </p>
                     </div>
                     <div class="formInput radioBtn">
-                      <label for="shape" class="formInput__label"
+                      <label class="formInput__label"
                         >形状<span class="hissu">必須</span></label
                       >
                       <div class="input__wrap">
@@ -153,7 +154,7 @@
                       </div>
                     </div>
                     <div class="formInput radioBtn">
-                      <label for="gloss" class="formInput__label"
+                      <label class="formInput__label"
                         >つや<span class="hissu">必須</span></label
                       >
                       <div class="input__wrap">
@@ -220,7 +221,7 @@
                       />
                     </div>
                     <div class="formInput radioBtn">
-                      <label for="place" class="formInput__label"
+                      <label class="formInput__label"
                         >使用箇所<span class="hissu">必須</span></label
                       >
                       <div class="input__wrap">
