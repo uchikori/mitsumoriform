@@ -53,9 +53,9 @@
           <!-- MW WP form 埋め込み -->
           <div class="mw_wp_form mw_wp_form_input">
             <form method="post">
-              <details class="formItem js-details is-opened" open="true">
+              <details class="formItem estimate01 js-details is-opened" open="true">
                 <summary class="formItem__title js-summary">
-                  見積依頼①<span></span>
+                  <h2>見積依頼①</h2><span></span>
                 </summary>
                 <div class="formItem__body js-content">
                   <div class="formItem__inner">
@@ -297,48 +297,547 @@
                   </div>
                 </div>
               </details>
-              <details class="formItem js-details">
+              <details class="formItem estimate02 js-details">
                 <summary class="formItem__title js-summary">
-                  見積依頼②<span></span>
+                  <h2>見積依頼②</h2><span></span>
                 </summary>
                 <div class="formItem__body js-content">
                   <div class="formItem__inner">
                     <div class="formInput">
-                      <label for="location2" class="formInput__label"
-                        >設置予定箇所<span class="hissu">必須</span></label
+                      <label for="location02" class="formInput__label"
+                        >設置予定箇所</label
                       >
                       <input
                         type="text"
-                        id="location2"
-                        name="location2"
+                        id="location02"
+                        name="location02"
                         class="location"
                         placeholder="トイレ、リビング、寝室、etc..."
                       />
                     </div>
+                    <div class="formInput">
+                      <label for="color02" class="formInput__label"
+                        >色</label
+                      >
+                      <div class="flex align-center" style="gap: 20px">
+                        <input
+                          type="color"
+                          id="color02"
+                          name="color02"
+                          class="color"
+                        />
+                        <button
+                          id="colorCheck02"
+                          type="button"
+                          class="colorCheck"
+                        >
+                          決定
+                        </button>
+                      </div>
+                      <input type="text" id="colorCode02" name="colorCode02" class="colorCode"/>
+                      <p class="caption">
+                        ※色はWeb上での参考イメージです。実際のサンプル品とは若干色合いが異なる可能性があります
+                      </p>
+                    </div>
+                    <div class="formInput radioBtn">
+                      <label class="formInput__label"
+                        >形状</label
+                      >
+                      <div class="input__wrap">
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape02"
+                              value="四角"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >四角</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape02"
+                              value="長方形"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >長方形</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape02"
+                              value="その他（お問い合わせください）"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >その他（お問い合わせください）</span
+                            ></label
+                          ></span
+                        >
+                      </div>
+                    </div>
+                    <div class="formInput">
+                      <label for="amount02" class="formInput__label"
+                        >数量</label
+                      >
+                      <div class="flex align-center" style="gap: 10px">
+                        <input
+                          type="text"
+                          id="amount02"
+                          name="amount02"
+                          class="amount"
+                          placeholder="100"
+                        />
+                        平米
+                      </div>
+                    </div>
+                    <div class="formInput radioBtn">
+                      <label class="formInput__label"
+                        >つや</label
+                      >
+                      <div class="input__wrap">
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="gloss02"
+                              value="有"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >有</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="gloss02"
+                              value="無"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >無</span
+                            ></label
+                          ></span
+                        >
+                      </div>
+                    </div>
+                    <div class="formInput">
+                      <label for="scheduledCompletion02" class="formInput__label"
+                        >竣工予定</label
+                      >
+                      <input
+                        type="text"
+                        id="scheduledCompletion02"
+                        name="scheduledCompletion02"
+                        class="scheduledCompletion"
+                        placeholder="20〇〇年〇〇月初旬ごろ"
+                      />
+                    </div>
+                    <div class="formInput">
+                      <label for="sampleNeed02" class="formInput__label"
+                        >サンプル必要時期</label
+                      >
+                      <input
+                        type="text"
+                        id="sampleNeed02"
+                        name="sampleNeed02"
+                        class="sampleNeed"
+                        placeholder="20〇〇年〇〇月初旬ごろ"
+                      />
+                    </div>
+                    <div class="formInput">
+                      <label for="tileNeed02" class="formInput__label"
+                        >タイル必要時期</label
+                      >
+                      <input
+                        type="text"
+                        id="tileNeed02"
+                        name="tileNeed02"
+                        class="tileNeed"
+                        placeholder="20〇〇年〇〇月初旬ごろ"
+                      />
+                    </div>
+                    <div class="formInput radioBtn">
+                      <label class="formInput__label"
+                        >使用箇所</label
+                      >
+                      <div class="input__wrap">
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="place02"
+                              value="床"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >床</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="place02"
+                              value="壁"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >壁</span
+                            ></label
+                          ></span
+                        >
+                      </div>
+                    </div>
+                    <div class="formInput">
+                      <label for="price02" class="formInput__label"
+                        >希望上代金額</label
+                      >
+                     <select name="price02" id="price02">
+                      <option value=>-以下から選択してください-</option>
+                      <option value="5000~5999円">5000~5999円</option>
+                      <option value="6000~6999円">6000~6999円</option>
+                      <option value="7000=7999円">7000=7999円</option>
+                      <option value="8000~8999円">8000~8999円</option>
+                      <option value="9000~9999円">9000~9999円</option>
+                      <option value="10000~10999円">10000~10999円</option>
+                      <option value="11000~11999円">11000~11999円</option>
+                      <option value="12000~12999円">12000~12999円</option>
+                      <option value="13000~13999円">13000~13999円</option>
+                      <option value="14000~14999円">14000~14999円</option>
+                      <option value="15000~15999円">15000~15999円</option>
+                      <option value="16000~16999円">16000~16999円</option>
+                      <option value="17000~17999円">17000~17999円</option>
+                      <option value="18000~18999円">18000~18999円</option>
+                      <option value="19000~19999円">19000~19999円</option>
+                      <option value="20000~20999円">20000~20999円</option>
+                      <option value="21000~21999円">21000~21999円</option>
+                      <option value="22000~22999円">22000~22999円</option>
+                      <option value="23000~23999円">23000~23999円</option>
+                      <option value="24000~24999円">24000~24999円</option>
+                      <option value="25000~25999円">25000~25999円</option>
+                      <option value="26000~26999円">26000~26999円</option>
+                      <option value="27000~27999円">27000~27999円</option>
+                      <option value="28000~28999円">28000~28999円</option>
+                      <option value="29000~29999円">29000~29999円</option>
+                      <option value="30000円以上">30000円以上</option>
+                     </select>
+                    </div>
+                    <div class="formInput">
+                      <label for="imageFile02" class="formInput__label"
+                        >添付資料</label
+                      >
+                      <input type="file" name="imageFile02" id="imageFile02">
+                       <p class="caption_black">
+                        ※イメージ画像や参考資料などがございましたらご添付ください
+                      </p>
+                    </div>
                   </div>
                 </div>
               </details>
-              <details class="formItem js-details">
+              <details class="formItem estimate03 js-details">
                 <summary class="formItem__title js-summary">
-                  見積依頼③<span></span>
+                  <h2>見積依頼③</h2><span></span>
                 </summary>
                 <div class="formItem__body js-content">
                   <div class="formItem__inner">
                     <div class="formInput">
-                      <label for="location3" class="formInput__label"
-                        >設置予定箇所<span class="hissu">必須</span></label
+                      <label for="location03" class="formInput__label"
+                        >設置予定箇所</label
                       >
                       <input
                         type="text"
-                        id="location3"
-                        name="location3"
+                        id="location03"
+                        name="location03"
                         class="location"
                         placeholder="トイレ、リビング、寝室、etc..."
                       />
                     </div>
+                    <div class="formInput">
+                      <label for="color03" class="formInput__label"
+                        >色</label
+                      >
+                      <div class="flex align-center" style="gap: 20px">
+                        <input
+                          type="color"
+                          id="color03"
+                          name="color03"
+                          class="color"
+                        />
+                        <button
+                          id="colorCheck03"
+                          type="button"
+                          class="colorCheck"
+                        >
+                          決定
+                        </button>
+                      </div>
+                      <input type="text" id="colorCode03" name="colorCode03" class="colorCode"/>
+                      <p class="caption">
+                        ※色はWeb上での参考イメージです。実際のサンプル品とは若干色合いが異なる可能性があります
+                      </p>
+                    </div>
+                    <div class="formInput radioBtn">
+                      <label class="formInput__label"
+                        >形状</label
+                      >
+                      <div class="input__wrap">
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape03"
+                              value="四角"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >四角</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape03"
+                              value="長方形"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >長方形</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="shape03"
+                              value="その他（お問い合わせください）"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >その他（お問い合わせください）</span
+                            ></label
+                          ></span
+                        >
+                      </div>
+                    </div>
+                    <div class="formInput">
+                      <label for="amount03" class="formInput__label"
+                        >数量</label
+                      >
+                      <div class="flex align-center" style="gap: 10px">
+                        <input
+                          type="text"
+                          id="amount03"
+                          name="amount03"
+                          class="amount"
+                          placeholder="100"
+                        />
+                        平米
+                      </div>
+                    </div>
+                    <div class="formInput radioBtn">
+                      <label class="formInput__label"
+                        >つや</label
+                      >
+                      <div class="input__wrap">
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="gloss03"
+                              value="有"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >有</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="gloss03"
+                              value="無"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >無</span
+                            ></label
+                          ></span
+                        >
+                      </div>
+                    </div>
+                    <div class="formInput">
+                      <label for="scheduledCompletion03" class="formInput__label"
+                        >竣工予定</label
+                      >
+                      <input
+                        type="text"
+                        id="scheduledCompletion03"
+                        name="scheduledCompletion03"
+                        class="scheduledCompletion"
+                        placeholder="20〇〇年〇〇月初旬ごろ"
+                      />
+                    </div>
+                    <div class="formInput">
+                      <label for="sampleNeed03" class="formInput__label"
+                        >サンプル必要時期</label
+                      >
+                      <input
+                        type="text"
+                        id="sampleNeed03"
+                        name="sampleNeed03"
+                        class="sampleNeed"
+                        placeholder="20〇〇年〇〇月初旬ごろ"
+                      />
+                    </div>
+                    <div class="formInput">
+                      <label for="tileNeed03" class="formInput__label"
+                        >タイル必要時期</label
+                      >
+                      <input
+                        type="text"
+                        id="tileNeed03"
+                        name="tileNeed03"
+                        class="tileNeed"
+                        placeholder="20〇〇年〇〇月初旬ごろ"
+                      />
+                    </div>
+                    <div class="formInput radioBtn">
+                      <label class="formInput__label"
+                        >使用箇所</label
+                      >
+                      <div class="input__wrap">
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="place03"
+                              value="床"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >床</span
+                            ></label
+                          ></span
+                        >
+                        <span class="mwform-radio-field horizontal-item"
+                          ><label
+                            ><input
+                              type="radio"
+                              name="place03"
+                              value="壁"
+                              class="btnHidden"
+                            /><span class="mwform-radio-field-text"
+                              >壁</span
+                            ></label
+                          ></span
+                        >
+                      </div>
+                    </div>
+                    <div class="formInput">
+                      <label for="price03" class="formInput__label"
+                        >希望上代金額</label
+                      >
+                     <select name="price03" id="price03">
+                      <option value=>-以下から選択してください-</option>
+                      <option value="5000~5999円">5000~5999円</option>
+                      <option value="6000~6999円">6000~6999円</option>
+                      <option value="7000=7999円">7000=7999円</option>
+                      <option value="8000~8999円">8000~8999円</option>
+                      <option value="9000~9999円">9000~9999円</option>
+                      <option value="10000~10999円">10000~10999円</option>
+                      <option value="11000~11999円">11000~11999円</option>
+                      <option value="12000~12999円">12000~12999円</option>
+                      <option value="13000~13999円">13000~13999円</option>
+                      <option value="14000~14999円">14000~14999円</option>
+                      <option value="15000~15999円">15000~15999円</option>
+                      <option value="16000~16999円">16000~16999円</option>
+                      <option value="17000~17999円">17000~17999円</option>
+                      <option value="18000~18999円">18000~18999円</option>
+                      <option value="19000~19999円">19000~19999円</option>
+                      <option value="20000~20999円">20000~20999円</option>
+                      <option value="21000~21999円">21000~21999円</option>
+                      <option value="22000~22999円">22000~22999円</option>
+                      <option value="23000~23999円">23000~23999円</option>
+                      <option value="24000~24999円">24000~24999円</option>
+                      <option value="25000~25999円">25000~25999円</option>
+                      <option value="26000~26999円">26000~26999円</option>
+                      <option value="27000~27999円">27000~27999円</option>
+                      <option value="28000~28999円">28000~28999円</option>
+                      <option value="29000~29999円">29000~29999円</option>
+                      <option value="30000円以上">30000円以上</option>
+                     </select>
+                    </div>
+                    <div class="formInput">
+                      <label for="imageFile03" class="formInput__label"
+                        >添付資料</label
+                      >
+                      <input type="file" name="imageFile03" id="imageFile03">
+                       <p class="caption_black">
+                        ※イメージ画像や参考資料などがございましたらご添付ください
+                      </p>
+                    </div>
                   </div>
                 </div>
               </details>
+              <div class="formItem userInfo">
+                <h2 class="formItem__title">お客様情報</h2>
+                <div class="formItem__inner">
+                   <div class="formInput">
+                      <label for="companyName" class="formInput__label"
+                        >会社名<span class="hissu">必須</span></label
+                      >
+                      <input
+                        type="text"
+                        id="companyName"
+                        name="companyName"
+                        class="companyName"
+                        placeholder="株式会社〇〇〇"
+                      />
+                    </div>
+                    <div class="formInput">
+                      <label for="name" class="formInput__label"
+                        >ご担当者様氏名<span class="hissu">必須</span></label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="name"
+                        placeholder="山田太郎"
+                      />
+                    </div>
+                    <div class="formInput">
+                      <label for="tel" class="formInput__label"
+                        >お電話番号<span class="hissu">必須</span></label
+                      >
+                      <input
+                        type="tel"
+                        id="tel"
+                        name="tel"
+                        class="tel"
+                        placeholder="012-345-678"
+                      />
+                    </div>
+                    <div class="formInput">
+                      <label for="email" class="formInput__label"
+                        >Eメール<span class="hissu">必須</span></label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="email"
+                        placeholder="example@email.com"
+                      />
+                    </div>
+                </div>
+              </div>
             </form>
           </div>
           <!-- MW WP form 埋め込み -->

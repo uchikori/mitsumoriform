@@ -111,6 +111,9 @@
     flex-direction: column;
     gap: 30px;
   }
+  &.userInfo {
+    margin-top: 60px;
+  }
 }
 .formInput {
   display: flex;
@@ -161,7 +164,37 @@ input[type="text"] {
     color: g.$color-grey;
   }
   &#colorCode,
-  &#amount {
+  &.amount {
+    width: 220px !important;
+  }
+}
+input[type="tel"] {
+  width: 100%;
+  border: solid 1px g.$color-grey;
+  background-color: g.$color-white;
+  padding: 10px;
+  @include g.font-style(16px, g.$color-dark, 700, 1, 0);
+  text-align: left;
+  &::placeholder {
+    color: g.$color-grey;
+  }
+  &#colorCode,
+  &.amount {
+    width: 220px !important;
+  }
+}
+input[type="email"] {
+  width: 100%;
+  border: solid 1px g.$color-grey;
+  background-color: g.$color-white;
+  padding: 10px;
+  @include g.font-style(16px, g.$color-dark, 700, 1, 0);
+  text-align: left;
+  &::placeholder {
+    color: g.$color-grey;
+  }
+  &#colorCode,
+  &.amount {
     width: 220px !important;
   }
 }
@@ -226,6 +259,7 @@ input[type="radio"] {
     background-color: #2ca6e0;
   }
 }
+
 button {
   &.colorCheck {
     width: 120px;
@@ -245,4 +279,7 @@ select {
   &::placeholder {
     color: g.$color-grey;
   }
+}
+//▼お客様情報
+.userInfo {
 }
