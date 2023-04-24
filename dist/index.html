@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <!-- 本番Build後に有効にする -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="front-page">
     <div class="wrapper">
@@ -836,13 +836,33 @@
                         placeholder="example@email.com"
                       />
                     </div>
+                    <div class="formInput">
+                      <label for="message" class="formInput__label"
+                        >自由記入欄</label
+                      >
+                      <textarea
+                        id="message"
+                        name="message"
+                        class="message"
+                        placeholder="メッセージ内容"
+                        cols="50"
+                        rows="12"
+                      ></textarea>
+                    </div>
                 </div>
+              </div>
+              <div class="formSubmit">
+                <button type="submit" name="submitBack" value="back" class="back">入力画面に戻る</button>
+                <input type="submit" name="submitBack" value="送信する" class="confirm"/>
               </div>
             </form>
           </div>
           <!-- MW WP form 埋め込み -->
         </div>
       </main>
+      <footer class="footer">
+        <small class="footer__copyright">©Range Co., Ltd. All Rights Reserved.</small>
+      </footer>
     </div>
 
     <script defer src="/main.js"></script>

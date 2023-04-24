@@ -1,1 +1,9 @@
-@use '../global' as g;
+@use "../global" as g;
+.footer {
+  width: 100%;
+  padding: 100px 0 16px;
+  text-align: center;
+  &__copyright {
+    @include g.font-style(12px, g.$color-dark, 700, 1.5, 0);
+  }
+}

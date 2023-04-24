@@ -97,6 +97,10 @@
         }
       }
     }
+    .userInfo & {
+      padding: 10px 0;
+      border-bottom: solid 1px g.$color-grey;
+    }
   }
   summary::-webkit-details-marker {
     /* Safariで表示されるデフォルトの三角形アイコンを消します */
@@ -112,7 +116,8 @@
     gap: 30px;
   }
   &.userInfo {
-    margin-top: 60px;
+    margin-top: 50px;
+    border-bottom: none;
   }
 }
 .formInput {
@@ -185,6 +190,22 @@ input[type="tel"] {
 }
 input[type="email"] {
   width: 100%;
+  border: solid 1px g.$color-grey;
+  background-color: g.$color-white;
+  padding: 10px;
+  @include g.font-style(16px, g.$color-dark, 700, 1, 0);
+  text-align: left;
+  &::placeholder {
+    color: g.$color-grey;
+  }
+  &#colorCode,
+  &.amount {
+    width: 220px !important;
+  }
+}
+textarea {
+  width: 100%;
+  max-width: 100%;
   border: solid 1px g.$color-grey;
   background-color: g.$color-white;
   padding: 10px;
@@ -280,6 +301,34 @@ select {
     color: g.$color-grey;
   }
 }
-//▼お客様情報
-.userInfo {
+//▼ボタン
+.formSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 60px;
+  @include g.tab {
+    flex-direction: column;
+  }
+}
+[type="submit"] {
+  width: clamp(17.5rem, 16.0294rem + 7.3529vw, 20.625rem);
+  max-width: 100%;
+  height: 60px;
+  text-align: center;
+  @include g.font-style(16px, g.$color-white, 700, 1, 0);
+  border-radius: 6px;
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: brightness(120%);
+    transition: filter 0.3s ease;
+  }
+  &.confirm {
+    background-color: g.$color-orange;
+  }
+  &.back {
+    background-color: g.$color-dark;
+  }
 }

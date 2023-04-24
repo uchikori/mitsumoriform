@@ -1,8 +1,9 @@
 import "./scss/style.scss";
-
 document.addEventListener("DOMContentLoaded", () => {
   setUpAccordion();
   colorPicker();
+  colorPicker02();
+  colorPicker03();
 });
 
 const setUpAccordion = () => {
@@ -98,6 +99,26 @@ const colorPicker = () => {
   colorText.readOnly = true;
 
   const button = document.getElementById("colorCheck");
+  button.addEventListener("click", () => {
+    colorText.value = colorElement.value;
+  });
+};
+const colorPicker02 = () => {
+  const colorElement = document.getElementById("color02");
+  const colorText = document.getElementById("colorCode02");
+  colorText.readOnly = true;
+
+  const button = document.getElementById("colorCheck02");
+  button.addEventListener("click", () => {
+    colorText.value = colorElement.value;
+  });
+};
+const colorPicker03 = () => {
+  const colorElement = document.getElementById("color03");
+  const colorText = document.getElementById("colorCode03");
+  colorText.readOnly = true;
+
+  const button = document.getElementById("colorCheck03");
   button.addEventListener("click", () => {
     colorText.value = colorElement.value;
   });
